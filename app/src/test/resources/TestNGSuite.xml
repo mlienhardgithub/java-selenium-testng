@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SimpleTestSuite" parallel="methods" thread-count="2" data-provider-thread-count="2" junit="false" configfailurepolicy="continue" annotations="JDK">
+	<!-- parameters for grid and cloud configuration, not included for this example
+	<parameter name="testConfigurationPath" value="config.TestConfiguration" />
+	<parameter name="serverHost" value="" />
+	<parameter name="serverPort" value="80" />
+	...
+	-->
+	<test name="Upgrade_UI_Windows_Firefox_Test" annotations="JDK">
+		<parameter name="platformName" value="Windows" />
+		<parameter name="platformVersion" value="11" />
+		<parameter name="browserName" value="firefox" />
+		<parameter name="browserVersion" value="124.0.1" />
+		<parameter name="environmentName" value="test" />
+		<!-- other parameters such as build, i18n, i10n, A11y, device form factors, etc.
+		not included for this example -->
+		<classes>
+			<class name="testng.upgrade.e2e.UpgradeUiTests" />
+		</classes>
+	</test>
+	
+	<test name="Upgrade_API_Test" annotations="JDK">
+		<classes>
+			<class name="testng.upgrade.api.UpgradeApiTests" />
+		</classes>
+	</test>
+</suite>

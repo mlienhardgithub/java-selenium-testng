@@ -1,0 +1,10 @@
+{
+	"firstName": "test-",
+	"lastName": "tester-",
+	"streetNumber": "101",
+	"streetName": "Mission Street",
+	"city": "San Francisco",
+	"state": "CA",
+	"zipCode": "94105",
+	"dateOfBirth": "01/01/1980"
+}
